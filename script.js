@@ -14,7 +14,6 @@ const myFunction = (a, b, ...c) => {
 };
 
 // Task 2
-
 const user = {
   banks: [
     { name: "Misha" },
@@ -28,7 +27,12 @@ const user = {
 };
 
 const cityFunction = ({ banks: [, , { adress: { city } = {} }] }) => {
-  console.log(city);
+  return city;
 };
-
 cityFunction(user); //Tbilisi
+
+// Task 3
+const deepCloner = (obj) => {
+  const deepCloned = JSON.parse(JSON.stringify(obj));
+  return deepCloned;
+};
